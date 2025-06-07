@@ -35,7 +35,7 @@ import { ChevronDown, LogOut, PlusCircle, Trash2, UploadCloud, Eye, Edit3, XCirc
 
 // --- Firebase Configuration ---
 //const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {
-  // apiKey: "AIzaSyB6Exd4Ku2IwU35zfyBuDNnoOHesW00eCA",
+  // apiKey: "",
    //authDomain: "haccp-herb-x-tea.firebaseapp.com",
    //projectId: "haccp-herb-x-tea",
    //storageBucket: "haccp-herb-x-tea.firebasestorage.app",
