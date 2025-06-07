@@ -31,24 +31,13 @@ import {
     getDownloadURL
 } from 'firebase/storage';
 import { ChevronDown, LogOut, PlusCircle, Trash2, UploadCloud, Eye, Edit3, XCircle, AlertTriangle, CheckCircle2, FileText, Image as ImageIcon, Wrench, FileSpreadsheet, UserX, ListChecks, Download, History } from 'lucide-react';
-// Note: jsPDF and jsPDF-Autotable are expected to be loaded via CDN <script> tags in your main index.html
 
-// --- Firebase Configuration ---
-//const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {
-  // apiKey: "",
-   //authDomain: "haccp-herb-x-tea.firebaseapp.com",
-   //projectId: "haccp-herb-x-tea",
-   //storageBucket: "haccp-herb-x-tea.firebasestorage.app",
-   //messagingSenderId: "595945476159",
-   //appId: "1:595945476159:web:089352a2fe30a50ed2e88a",
-  // measurementId: "G-YD8HYP7HLX"
-//};
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB6Exd4Ku2IwU35zfyBuDNnoOHesW00eCA",
+  apiKey: process.env.REACT_APP_GOOGLE_API_KEY, // Use environment variable
   authDomain: "haccp-herb-x-tea.firebaseapp.com",
   projectId: "haccp-herb-x-tea",
-  storageBucket: "haccp-herb-x-tea.firebasestorage.app",
+  storageBucket: "haccp-herb-x-tea.appspot.com", // Corrected typical storage bucket domain
   messagingSenderId: "595945476159",
   appId: "1:595945476159:web:089352a2fe30a50ed2e88a",
   measurementId: "G-YD8HYP7HLX"
