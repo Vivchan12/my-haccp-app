@@ -13,9 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm run build
+      - name: Install Dependencies
+        run: npm ci
+        working-directory: ./my-app
+      - name: Build application
+        run: npm run build
+        working-directory: ./my-app
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_HACCP_HERB_X_TEA }}
           projectId: haccp-herb-x-tea
+          entryPoint: ./my-app
